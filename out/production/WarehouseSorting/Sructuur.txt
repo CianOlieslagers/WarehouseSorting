@@ -1,0 +1,51 @@
+Stack S:
+- Capacity (cs)
+- Positions
+- StackID
+
+Boxes:
+- BoxID
+
+Vehicles V:
+- Capacity (cv)
+- (Un)loading speed/time (loading time = unloading time)
+- Vehicle speed
+- 
+
+Set of transfer requests R:
+- Tuple <srpu, srpl, br>
+- srpu = Pickup location (buffer point or storage stack)
+- srpl = Place location/delivery location (buffer point or storage stack)
+- br = associated box
+- every request is associated with a vehicle
+- 
+
+Map maken (plattegrond):
+- Location entrance and exit
+- Location stacks
+- Initial positions vehicles
+- 
+
+Constraints:
+- Multiple vehicles can't (un)load at the same stack (you can at buffer point)
+- 
+
+How it goes:
+- V travels from current location (sv) to srpu
+- Load b from top of associated stack
+- Travel from srpu to srpl
+- Unload b atop srpl
+
+Special cases:
+- If box not at top of stack -> relocate the boxes on top of the target box. Relocate to any free stack
+- 
+
+Extra:
+- Employ multiple vehicles
+- 
+
+
+
+
+
+
