@@ -80,7 +80,7 @@ public class Vehicle {
     }
 
     public void displayLoad(){
-        System.out.println("Vehicle with id: " + id + ", at location (" + coordinaat.x + "; " + coordinaat.y + "), is carrying: "+ load);
+        System.out.println("Vehicle with id: " + id + ", at location " + coordinaat.toStringShort() + ", is carrying: "+ load);
     }
 
 

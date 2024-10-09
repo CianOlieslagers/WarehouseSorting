@@ -62,6 +62,6 @@ public class Stack {
     //
 
     public void displayStack(){
-        System.out.println("Stack with id: " + ID + ", at location (" + coordinaat.x + "; " + coordinaat.y + "), contains boxes: "+ boxes);
+        System.out.println("Stack with id: " + ID + ", at location " + coordinaat.toStringShort() + ", contains boxes: "+ boxes);
     }
 }
