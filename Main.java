@@ -7,9 +7,12 @@ public class Main {
         Handler handler = new Handler(config);
 
 
-        System.out.println("\nMoving Vehicle 1 to Stack 1, loading a box, and unloading it on Stack 2:");
-        handler.moveVehicleAndLoadBox(1, 1);  // Move vehicle 1 to stack 1 and load a box
+
+
+        handler.moveVehicleToEntranceAndRetrieveBox(1);
         handler.moveVehicleAndUnloadBox(1, 2); // Move vehicle 1 to stack 2 and unload the box
+        handler.moveVehicleAndLoadBox(1,2);
+        handler.moveVehicleAndUnloadBox(1,4);
 
         // Display all objects initialized within the configuration
         config.displayAll();

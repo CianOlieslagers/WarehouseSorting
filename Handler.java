@@ -1,5 +1,6 @@
 public class Handler {
     private Configuration config;
+    private int boxCounter = 1;
 
 
     public Handler(Configuration config) {
@@ -33,7 +34,30 @@ public class Handler {
             // Move vehicle to stack location
             vehicle.moveto(stack.getCoordinaat());
             // Unload box onto the stack
-            vehicle.removeBox();
+            Box box = vehicle.removeBox();
+            stack.AddBox(box);
         }
     }
+    public void moveVehicleToEntranceAndRetrieveBox(int vehicleId) throws Exception {
+        Vehicle vehicle = config.getVehicleById(vehicleId);
+
+        if (vehicle != null) {
+            // Simulate vehicle moving to the entrance
+            System.out.println("Vehicle " + vehicleId + " moved to the entrance.");
+
+            // Create a new box (simulating that the entrance always has boxes)
+            Box newBox = new Box(boxCounter++);
+
+            // Load the box onto the vehicle
+            vehicle.loadBox(newBox);
+            System.out.println("Vehicle " + vehicleId + " retrieved Box " + newBox.getId() + " from the entrance.");
+        } else {
+            System.out.println("Vehicle with ID " + vehicleId + " not found!");
+        }
+    }
+
+
+
+
+
 }
