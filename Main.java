@@ -1,19 +1,26 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Create a map using the string representation
-        String mapString =  "# # # # # # # # # # # # #\n" +
-                            "# . $ . $ . $ . $ . $ . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "# . . . . . . . . . . . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "_ . . . . . . . . . . . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "# . & . . . $ . $ . $ . #\n" +
-                            "# # # # # # # # # # # # #";
+        // Create a Configuration object to initialize everything
+        Configuration config = new Configuration();
 
-        Map myMap = new Map(mapString);
+        // Display all the initialized objects
+        config.displayAll();
 
-        // Display the map
-        myMap.display();
+        // Modify a vehicle from the vehicles list
+        List<Vehicle> vehicles = config.getVehicles();
+        System.out.println("\nVehicle test:\n");
+        vehicles.get(0).displayVehicle();
+
+        // Modify a stack from the stacks list
+        List<Stack> stacks = config.getStacks();
+        System.out.println("\nStack test:\n");
+        stacks.get(0).displayStack();
+
+        // Display all objects after modification
+        System.out.println("\nAfter modification:");
+        config.displayAll();
     }
 }
+

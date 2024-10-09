@@ -6,10 +6,10 @@ public class Stack {
     private int IdStack;
 
 
-    public Stack(int capacity, java.util.Stack<Box> boxes,  Coordinaat coördinaat, int idStack) {
+    public Stack(int capacity, Coordinaat coordinaat, int idStack) {
         this.capacity = capacity;
-        this.boxes = boxes;
-        this.coordinaat = coördinaat;
+        this.boxes = new java.util.Stack<Box>();
+        this.coordinaat = coordinaat;
         this.IdStack = idStack;
     }
 
@@ -30,12 +30,12 @@ public class Stack {
         this.boxes = boxes;
     }
 
-    public Coordinaat getCoördinaat() {
+    public Coordinaat getCoordinaat() {
         return coordinaat;
     }
 
-    public void setCoördinaat(Coordinaat coördinaat) {
-        this.coordinaat = coördinaat;
+    public void setCoordinaat(Coordinaat coordinaat) {
+        this.coordinaat = coordinaat;
     }
 
     public int getIdStack() {
