@@ -17,7 +17,7 @@ Set of transfer requests R:
 - srpu = Pickup location (buffer point or storage stack)
 - srpl = Place location/delivery location (buffer point or storage stack)
 - br = associated box
-- every request is associated with a vehicle
+- every request is associated with a Vehicle
 - 
 
 Map maken (plattegrond):

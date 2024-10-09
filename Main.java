@@ -1,19 +1,12 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Create a map using the string representation
-        String mapString =  "# # # # # # # # # # # # #\n" +
-                            "# . $ . $ . $ . $ . $ . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "# . . . . . . . . . . . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "_ . . . . . . . . . . . #\n" +
-                            "# . . . . . . . . . . $ #\n" +
-                            "# . & . . . $ . $ . $ . #\n" +
-                            "# # # # # # # # # # # # #";
+        // Create a Configuration object to initialize everything based on the map
+        Configuration config = new Configuration();
 
-        Map myMap = new Map(mapString);
-
-        // Display the map
-        myMap.display();
+        // Display all objects initialized within the configuration
+        config.displayAll();
     }
 }
+

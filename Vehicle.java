@@ -8,11 +8,11 @@ public class Vehicle {
 
 
     // Constructor
-    public Vehicle(int id, Coordinaat coordinaat, int capacity, ArrayList<Box> load) {
+    public Vehicle(int id, Coordinaat coordinaat, int capacity) {
         this.id = id;
         this.coordinaat = coordinaat;
         this.capacity = capacity;
-        this.load = load;
+        this.load = new ArrayList<Box>();
     }
 
     // Getter en Setter
@@ -70,7 +70,7 @@ public class Vehicle {
     }
 
     public void displayLoad(){
-        System.out.println("Vehicle with id: "+id +" is carrying: "+ load);
+        System.out.println("Vehicle with id: " + id + ", at location (" + coordinaat.x + "; " + coordinaat.y + "), is carrying: "+ load);
     }
 
 

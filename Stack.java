@@ -1,16 +1,17 @@
 
 public class Stack {
+    private int ID;
     private int capacity;
     private java.util.Stack<Box> boxes;
     private Coordinaat coordinaat;
-    private int IdStack;
 
 
-    public Stack(int capacity, java.util.Stack<Box> boxes,  Coordinaat coördinaat, int idStack) {
+
+    public Stack(int ID, int capacity, Coordinaat coordinaat) {
+        this.ID = ID;
         this.capacity = capacity;
-        this.boxes = boxes;
-        this.coordinaat = coördinaat;
-        this.IdStack = idStack;
+        this.boxes = new java.util.Stack<Box>();
+        this.coordinaat = coordinaat;
     }
 
     // Getter en Setter
@@ -30,20 +31,20 @@ public class Stack {
         this.boxes = boxes;
     }
 
-    public Coordinaat getCoördinaat() {
+    public Coordinaat getCoordinaat() {
         return coordinaat;
     }
 
-    public void setCoördinaat(Coordinaat coördinaat) {
-        this.coordinaat = coördinaat;
+    public void setCoordinaat(Coordinaat coordinaat) {
+        this.coordinaat = coordinaat;
     }
 
     public int getIdStack() {
-        return IdStack;
+        return ID;
     }
 
     public void setIdStack(int idStack) {
-        IdStack = idStack;
+        ID = idStack;
     }
 
     // Stack funtionaliteit
@@ -63,6 +64,6 @@ public class Stack {
     //
 
     public void displayStack(){
-        System.out.println("Stack at location: "+ coordinaat +" with id: "+ IdStack + " contains boxes: "+ boxes );
+        System.out.println("Stack with id: " + ID + ", at location (" + coordinaat.x + "; " + coordinaat.y + "), contains boxes: "+ boxes);
     }
 }
