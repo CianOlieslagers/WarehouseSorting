@@ -7,7 +7,7 @@ Boxes:
 - BoxID
 
 Vehicles V:
-- Capacity (cv)
+- Capacity (cv)  OK
 - (Un)loading speed/time (loading time = unloading time)
 - Vehicle speed
 - 

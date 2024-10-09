@@ -4,14 +4,16 @@ public class Vehicle {
     private int id;
     private Coordinaat coordinaat;
     private int capacity;
+    private int speed;
     private ArrayList<Box> load;
 
 
     // Constructor
-    public Vehicle(int id, Coordinaat coordinaat, int capacity) {
+    public Vehicle(int id, Coordinaat coordinaat, int capacity, int speed) {
         this.id = id;
         this.coordinaat = coordinaat;
         this.capacity = capacity;
+        this.speed = speed;
         this.load = new ArrayList<Box>();
     }
 
@@ -34,6 +36,14 @@ public class Vehicle {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
     public ArrayList<Box> getLoad() {

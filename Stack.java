@@ -5,8 +5,6 @@ public class Stack {
     private java.util.Stack<Box> boxes;
     private Coordinaat coordinaat;
 
-
-
     public Stack(int ID, int capacity, Coordinaat coordinaat) {
         this.ID = ID;
         this.capacity = capacity;

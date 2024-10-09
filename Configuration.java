@@ -4,6 +4,7 @@ import java.util.List;
 public class Configuration {
     // Constants
     public static final int VEHICLE_CAPACITY = 4;
+    public static final int VEHICLE_SPEED = 4;
     public static final int STACK_CAPACITY = 10;
 
     private Map map;
@@ -47,7 +48,7 @@ public class Configuration {
                 // Check if the cell contains a vehicle ('&')
                 if (cell.equals("&")) {
                     Coordinaat coordinaat = new Coordinaat(x, y); // x is column, y is row
-                    vehicles.add(new Vehicle(vehicleId++, coordinaat, VEHICLE_CAPACITY));
+                    vehicles.add(new Vehicle(vehicleId++, coordinaat, VEHICLE_CAPACITY, VEHICLE_SPEED));
                 }
 
                 // Check if the cell contains a stack ('$')
