@@ -26,11 +26,34 @@ public class Map {
 
     // Method to display the map
     public void display() {
-        for (List<Character> row : map) {
-            for (Character cell : row) {
-                System.out.print(cell + " ");
+        int rows = map.size();
+        int cols = map.get(0).size();
+
+        // Print column headers (0, 1, 2, ..., 10, 11, ...)
+        System.out.print("   "); // Extra space for row numbers (and alignment for double digits)
+        for (int col = 0; col < cols; col++) {
+            if (col < 10) {
+                System.out.print(col + "  "); // Add extra space for single-digit columns
+            } else {
+                System.out.print(col + " "); // Add normal space for double-digit columns
+            }
+        }
+        System.out.println();
+
+        // Print each row with row numbers
+        for (int row = 0; row < rows; row++) {
+            if (row < 10) {
+                System.out.print(row + "  "); // Add extra space for single-digit rows
+            } else {
+                System.out.print(row + " "); // Add normal space for double-digit rows
+            }
+
+            for (Character cell : map.get(row)) {
+                System.out.print(cell + "  "); // Two spaces between each cell for proper alignment
             }
             System.out.println();
         }
     }
+
+
 }

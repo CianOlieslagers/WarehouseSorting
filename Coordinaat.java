@@ -25,6 +25,9 @@ public class Coordinaat {
         this.y = y;
     }
 
+    public String toStringShort() {
+        return "(" + x + "; " + y + ")";
+    }
     @Override
     public String toString() {
         return "Coördinaat{" +
@@ -32,4 +35,5 @@ public class Coordinaat {
                 ", y=" + y +
                 '}';
     }
+
 }

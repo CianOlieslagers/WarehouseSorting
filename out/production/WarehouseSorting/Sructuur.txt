@@ -7,7 +7,7 @@ Boxes:
 - BoxID
 
 Vehicles V:
-- Capacity (cv)
+- Capacity (cv)  OK
 - (Un)loading speed/time (loading time = unloading time)
 - Vehicle speed
 - 
@@ -18,7 +18,7 @@ Set of transfer requests R:
 - srpl = Place location/delivery location (buffer point or storage stack)
 - br = associated box
 - every request is associated with a Vehicle
-- 
+- has an ID
 
 Map maken (plattegrond):
 - Location entrance and exit
