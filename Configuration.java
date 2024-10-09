@@ -84,4 +84,27 @@ public class Configuration {
             stack.displayStack();
         }
     }
+
+    public Vehicle getVehicleById(int id) {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getId() == id) {
+                return vehicle;
+            }
+        }
+        System.out.println("Vehicle with ID " + id + " not found!");
+        return null;
+    }
+
+    // Helper method to find stack by ID
+    public Stack getStackById(int id) {
+        for (Stack stack : stacks) {
+            if (stack.getIdStack() == id) {
+                return stack;
+            }
+        }
+        System.out.println("Stack with ID " + id + " not found!");
+        return null;
+    }
+
+
 }
