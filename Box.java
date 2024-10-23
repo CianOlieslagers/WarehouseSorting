@@ -1,11 +1,11 @@
 public class Box {
-    private String id;
+    private int id;
 
-    public Box(String id) {
+    public Box(int id) {
         this.id = id;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

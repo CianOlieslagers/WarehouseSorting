@@ -69,14 +69,14 @@ public class Vehicle {
     }
 
 
-    public void removeBox() throws Exception{
+    public Box removeBox() throws Exception{
         if(load.isEmpty() ){
             throw new Exception("Vehicle is empty");
         }
 
         Box box = load.remove(load.size()-1);
         System.out.println("Vehicle with id: "+ id + " Removed Box with Id: "+ box.getId());
-
+        return box;
     }
 
     public void displayLoad(){
