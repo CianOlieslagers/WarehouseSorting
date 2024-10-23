@@ -1,17 +1,17 @@
 public class Request {
     private int id;            // Unique request ID
-    private Coordinaat srpu;      // Pickup location (buffer point or storage stack)
-    private Coordinaat srpl;      // Place/delivery location (buffer point or storage stack)
-    private Box br;             // Associated box
-    private Vehicle vehicle;    // Associated vehicle for the request
+    private int targetBoxID;
+    private int targetStackID;
+    private int br;             // Associated box
+    private int vehicleID;    // Associated vehicle for the request
 
     // Constructor to initialize all fields
-    public Request(int id, Coordinaat srpu, Coordinaat srpl, Box br, Vehicle vehicle) {
+    public Request(int id, Coordinaat srpu, Coordinaat srpl, int br, int vehicleID) {
         this.id = id;
         this.srpu = srpu;
         this.srpl = srpl;
         this.br = br;
-        this.vehicle = vehicle;
+        this.vehicleID = vehicleID;
     }
 
     // Getters for all fields
@@ -27,12 +27,12 @@ public class Request {
         return srpl;
     }
 
-    public Box getBr() {
+    public int getBr() {
         return br;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public int getVehicleID() {
+        return vehicleID;
     }
 
     // Display method to output the details of the request
@@ -41,7 +41,7 @@ public class Request {
         System.out.println("Pickup Location: " + srpu);
         System.out.println("Delivery Location: " + srpl);
         System.out.println("Associated Box: " + br);
-        System.out.println("Assigned Vehicle ID: " + vehicle.getId());
+        System.out.println("Assigned Vehicle ID: " + vehicleID);
     }
 }
 

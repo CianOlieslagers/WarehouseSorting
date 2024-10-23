@@ -10,6 +10,7 @@ public class Configuration {
     private Map map;
     private List<Vehicle> vehicles;
     private List<Stack> stacks;
+    private List<Request> requests; // List to hold requests
 
     // Constructor to initialize the map and lists of vehicles and stacks based on the map
     public Configuration() {
@@ -32,6 +33,19 @@ public class Configuration {
 
         // Parse the map and initialize vehicles and stacks
         parseMapForObjects(mapString);
+
+        // Make the requests
+        // R1: Request with ID=1 at Coordinaat(2,1) to Buffer (-1) at Coordinaat(4,1)
+        Coordinaat pickupCoord1 = new Coordinaat(2, 1); // Stack ID 1
+        Coordinaat deliveryCoord1 = new Coordinaat(4, 1); // Buffer (-1)
+        Request request1 = new Request(1, pickupCoord1, deliveryCoord1, 1, 1);
+        requests.add(request1);
+
+        // Example 2: Request with Stack 2 at Coordinaat(4,1) to Buffer (-1) at Coordinaat(2,2)
+        Coordinaat pickupCoord2 = new Coordinaat(4, 1); // Stack ID 2
+        Coordinaat deliveryCoord2 = new Coordinaat(2, 2); // Buffer (-1)
+        Request request2 = new Request(2, pickupCoord2, deliveryCoord2, 2, 1);
+        requests.add(request2);
     }
 
     // Parse the map string and initialize vehicles and stacks based on characters
